@@ -193,7 +193,7 @@ SIMPLE_JWT = {
 
 DJOSER = {
     "SERIALIZERS": {
-        'user_create': 'utilisaturs.serializers.UserCreateSerializers',
+        'user_create': 'utilisaturs.serializers.UtilisateurCreateSerializer',
         'LOGIN_FIELD': 'email',  # Le champ utilisé pour l'authentification (par exemple, email ou username)
         'HIDE_USERS': False,  # Afficher ou masquer la liste des utilisateurs
         # Autres paramètres...
