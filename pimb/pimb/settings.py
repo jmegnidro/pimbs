@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django_extensions',
     'drf_yasg',
     'rest_framework',
     'djoser',
@@ -48,6 +49,9 @@ INSTALLED_APPS = [
     'innovation',
     'soacial',
     "corsheaders",
+    'dj_rest_auth',
+    'allauth',
+    'allauth.account',
 
 ]
 
@@ -61,6 +65,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'allauth.account.middleware.AccountMiddleware',
+
 ]
 
 ROOT_URLCONF = 'pimb.urls'
@@ -199,3 +205,9 @@ DJOSER = {
         # Autres paramètres...
     }
 }
+
+CORS_ALLOW_ALL_ORIGINS = True  # Pour le développement; pour la production, utilise CORS_ALLOWED_ORIGINS
+
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:8080",  # Port par défaut de Vue.js
+]

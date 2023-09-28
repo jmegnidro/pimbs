@@ -19,7 +19,7 @@ class UtilisateurCreateSerializer(UserCreateSerializer):
             'role')
 
 
-class UtilisateurSerializer(UserSerializer):
-    class Meta(UserSerializer.Meta):
+class UtilisateurLoginSerializer(serializers.ModelSerializer):
+    class Meta:
         model = Utilisateur
-        fields = '__all__'
+        fields = ('username', 'email', 'password')
